@@ -1,0 +1,122 @@
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 100%;
+}
+
+.start-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111;
+  background: #fff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  background: #e8e8e8;
+}
+
+.error {
+  margin: 0;
+  max-width: 20rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #f87171;
+}
+
+.camera {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+.camera-stage {
+  position: fixed;
+  inset: 0;
+}
+
+.hidden-canvas {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-emoji {
+  --emoji-shift-x: 0px;
+  position: absolute;
+  top: 1.25rem;
+  right: 20vw;
+  margin-left: 0;
+  font-size: clamp(4rem, 14vw, 10rem);
+  animation: floatEmoji 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+  user-select: none;
+}
+
+.status-card {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  width: 28rem;
+  max-width: calc(100vw - 2.5rem);
+  box-sizing: border-box;
+  padding: 0.8rem 1rem;
+  border-radius: 0.9rem;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.status-title,
+.status-subtitle,
+.sending {
+  margin: 0;
+}
+
+.status-subtitle,
+.sending {
+  margin-top: 0.35rem;
+}
+
+.top-list {
+  margin-top: 0.55rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.top-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@keyframes floatEmoji {
+  0%,
+  100% {
+    transform: translate(var(--emoji-shift-x), -8px) scale(1);
+  }
+  50% {
+    transform: translate(var(--emoji-shift-x), 8px) scale(1.08);
+  }
+}

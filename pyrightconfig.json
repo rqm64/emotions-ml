@@ -1,0 +1,11 @@
+{
+  "venvPath": "server",
+  "venv": ".venv",
+  "include": ["server"],
+  "executionEnvironments": [
+    {
+      "root": "server",
+      "extraPaths": ["server"]
+    }
+  ]
+}

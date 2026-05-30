@@ -1,0 +1,64 @@
+# ==============================================================================
+# ОБЩИЕ ПРАВИЛА (Секреты, Системные файлы, IDE)
+# ==============================================================================
+
+# Конфиденциальные данные (токены, пароли, ключи)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Логи и отчеты об ошибках
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Настройки редакторов кода и ОС
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ==============================================================================
+# UI (ФРОНТЕНД)
+# ==============================================================================
+
+# Зависимости и папки сборки
+**/ui/node_modules/
+**/ui/dist/
+**/ui/build/
+**/ui/.next/
+**/ui/out/
+
+**/ui/.eslintcache
+**/ui/.parcel-cache
+**/ui/.turbo/
+
+**/server/__pycache__/
+**/server/*.py[cod]
+**/server/*$py.class
+
+**/server/.venv/
+**/server/venv/
+**/server/env/
+**/server/ENV/
+**/server/pip-wheel-metadata/
+
+**/server/*.so
+
+**/server/*.sqlite3
+**/server/*.db
+
+**/server/.pytest_cache/
+**/server/.mypy_cache/
+**/server/.ruff_cache/
+**/server/.coverage
+**/server/htmlcov/
+
+**/server/.poetry/
+
+**/server/artifacts/
+**/server/data/
+
+*.keras
